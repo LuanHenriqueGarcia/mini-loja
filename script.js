@@ -36,27 +36,27 @@ function InicializarLoja() {
   items.map((val) => {
     containerProdutos.innerHTML +=
       `
-      <div class="produto-single">
-        <img src="` +
+        <div class="produto-single">
+          <img src="` +
       val.img +
       `" />
-        <p>` +
+          <p>` +
       val.nome +
       `</p>
-        <p>` +
+          <p>` +
       val.descricao +
       `</p>
-        <p> fornecedor: ` +
+          <p> fornecedor: ` +
       val.fornecedor +
       `</p>
-        <p> valor à vista: R$ <span id="preco">` +
+          <p> valor à vista: R$ <span id="preco">` +
       val.preco +
       `</span></p>
-        <a key="` +
+          <a key="` +
       val.id +
       `" href="#" class="add-to-cart">Adicionar ao carrinho!<a/>
-      </div>
-    `;
+        </div>
+      `;
   });
 
   var links = document.getElementsByClassName("add-to-cart");
@@ -78,27 +78,34 @@ function atualizarCarrinho() {
     if (val.quantidade > 0) {
       containerCarrinho.innerHTML +=
         `
-        <div class="info-single-checkout">
-          <p style="float: left;">Produto: ` +
+          <div class="info-single-checkout">
+            <p style="float: left;">Produto: ` +
         val.nome +
         `</p>
-          <p style="float: right;">Quantidade: ` +
+            <p style="float: right;">Quantidade: ` +
         val.quantidade +
         ` </p>
-          <div style="clear:both"></div>
-        </div>
-      `;
+            <div style="clear:both"></div>
+          </div>
+        `;
       total += val.quantidade * parseFloat(val.preco);
     }
   });
   containerCarrinho.innerHTML +=
     `
-    <div class="total-checkout">
-      <p>Total: R$ ` +
+      <div class="total-checkout">
+        <p class="center-pag">Total: R$ ` +
     total.toFixed(2) +
     `</p>
-    </div>
-  `;
+        <p class="center-pag"><button class="btnPagamento">Prosseguir para o Pagamento</button></p>
+      </div>
+    `;
+
+  document
+    .getElementById("btnPagamento")
+    .addEventListener("click", function () {
+      window.location.href = "/pagamento"; 
+    });
 }
 
 InicializarLoja();

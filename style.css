@@ -157,3 +157,19 @@ h2 {
     margin: 20px;
   }
 }
+
+.btnPagamento {
+ background-color: #007bff;
+ color: white;
+ width:300px;
+height: 40px;
+border: 1px solid white;
+
+
+}
+
+.center-pag {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
