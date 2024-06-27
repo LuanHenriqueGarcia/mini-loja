@@ -89,15 +89,21 @@ footer {
   }
 }
 
-.add-to-cart {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 5px 10px;
-  background: #007bff;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.3s;
-}
+
+  .add-to-cart {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    background: #5fb382;
+    color: #ffffff;
+    text-decoration: none;
+    transition: background 0.3s;
+    cursor: pointer;
+    border: 1px solid white;
+    width: 300px;
+    height: 40px;
+  }
+
 
 h2 {
   background-color: #623282;
@@ -131,6 +137,8 @@ h2 {
   background: #f1f1f1;
   bottom: 0;
   width: 100%;
+
+ 
 }
 
 .footer-text {
@@ -159,13 +167,12 @@ h2 {
 }
 
 .btnPagamento {
- background-color: #007bff;
- color: white;
- width:300px;
-height: 40px;
-border: 1px solid white;
-
-
+  background-color: #007bff;
+  color: white;
+  width: 300px;
+  height: 40px;
+  border: 1px solid white;
+  cursor: pointer;
 }
 
 .center-pag {
